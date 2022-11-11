@@ -16,17 +16,15 @@ const firebaseConfig = {
   appId: "1:17476986722:web:651a768b369193afb4ee3b"
 };
 
+const firebaseApp = initializeApp(firebaseConfig);
+
 const provider = new GoogleAuthProvider();
 
 provider.setCustomParameters({
   prompt: 'select_account',
 });
 
-export const createUserProfileDocument = async (userAuth, additionalData) => {
-  if (!userAuth) return;
 
-  console.log(userAuth);
-};
 
 export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
