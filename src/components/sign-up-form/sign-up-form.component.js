@@ -5,20 +5,23 @@ const SignUpForm = () => {
   return (
     <div>
       <h1>Sign Up With your Email and Password</h1>
-      <form>
+      <form onSubmit={()=>{}}>
         <label>Display Name</label>
-        <input required />
+        <input type="text" required />
 
         <label>Email</label>
-        <input required />
+        <input type="email" required />
 
         <label>Password</label>
-        <input required />
+        <input type="password" required />
 
         <label>Confirm Password</label>
-        <input required />
+        <input type="password" required />
+        <button type="submit">Sign UP</button>
       </form>
     </div>
 
   );
 }
+
+export default SignUpForm;
