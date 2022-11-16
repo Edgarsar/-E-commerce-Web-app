@@ -39,7 +39,7 @@ export const db = getFirestore();
 
 export const createUserDocumentFromAuth = async (userAuth) => {
   if (!userAuth) return;
-  
+
   const userDocRef = doc(db, 'users', userAuth.uid);
 
   const userSnapshot = await getDoc(userDocRef);
@@ -65,6 +65,6 @@ export const createUserDocumentFromAuth = async (userAuth) => {
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
-  return await createAuthUserWithEmailAndPassword(auth, email, password);
+  return await createUserWithEmailAndPassword(auth, email, password);
 
 };
