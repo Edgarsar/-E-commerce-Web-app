@@ -3,8 +3,8 @@
 const FormInput = ({ label, ...otherProps }) => {
 
   return (
-    <div>
-      <label></label>
+    <div className="group">
+      <label>{label}</label>
       <input {...otherProps} />
     </div>
   );
