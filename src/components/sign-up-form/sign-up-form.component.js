@@ -1,11 +1,20 @@
+import { useState } from "react";
 
+const defaultFormFields = {
+  displayName: "",
+  email: "",
+  password: "",
+  confirmPassword: ""
+}
 
 const SignUpForm = () => {
+  const [formFields, setFormField] = useState(defaultFormFields);
+  const { displayName, email, password, confirmPassword } = defaultFormFields;
 
   return (
     <div>
       <h1>Sign Up With your Email and Password</h1>
-      <form onSubmit={()=>{}}>
+      <form onSubmit={() => { }}>
         <label>Display Name</label>
         <input type="text" required />
 
