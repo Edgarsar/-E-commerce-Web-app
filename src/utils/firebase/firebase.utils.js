@@ -14,6 +14,8 @@ import {
   doc,
   getDoc,
   setDoc,
+  collection,
+  writeBatch,
 } from 'firebase/firestore';
 
 
@@ -27,6 +29,10 @@ const firebaseConfig = {
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
+
+export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+  const collectionRef = collection(db, collectionKey);
+};
 
 const googleProvider = new GoogleAuthProvider();
 
