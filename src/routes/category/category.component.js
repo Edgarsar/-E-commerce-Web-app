@@ -1,6 +1,6 @@
 import { useParams } from 'react-router';
 import { Fragment, useContext, useEffect, useState } from 'react';
-import { CategoriesContext } from '../../components/contexts/categories.context';
+import { CategoriesContext } from '../../contexts/categories.context';
 import ProductCard from '../../components/product-card/product-card.component';
 import './category.styles.scss';
 
