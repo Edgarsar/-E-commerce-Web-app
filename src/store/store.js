@@ -14,7 +14,7 @@ const middleware = [process.env.NODE_ENV !== "production" && logger, thunk].filt
 const persistConfig = {
   key: "root",
   storage,
-  blackList: ["user"]
+  whitelist: ["cart"]
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
