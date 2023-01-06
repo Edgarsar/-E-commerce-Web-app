@@ -50,6 +50,7 @@ const PaymentForm = () => {
       alert(paymentResult.error.message);
     } else {
       if (paymentResult.paymentIntent.status === 'succeeded') {
+        elements.getElement(CardElement).clear();
         alert('Payment Successful!');
       }
     }
