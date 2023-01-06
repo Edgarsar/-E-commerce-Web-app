@@ -11,7 +11,7 @@ exports.handler = async (event) => {
       amount,
       currency: "usd",
       payment_method_types: ["card"],
-    })
+    });
 
     return {
       statusCode: 200,
@@ -21,11 +21,11 @@ exports.handler = async (event) => {
   }
   catch (error) {
     console.log({ error });
-
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error })
-    };
   }
+
+  return {
+    statusCode: 400,
+    body: JSON.stringify({ error })
+  };
 
 };
